@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/batteryLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/battery_level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wifiConnectivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/wifi_connectivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/batteryLevel" />
+
+    <TextView
+        android:id="@+id/bluetoothConnectivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/bluetooth_connectivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wifiConnectivity" />
+
+    <TextView
+        android:id="@+id/missionTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/set_timer"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mission_type" />
+
+    <Spinner
+        android:id="@+id/missionTimerDDB"
+        android:layout_width="185dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toEndOf="@+id/missionTimer"
+        app:layout_constraintTop_toBottomOf="@+id/missionType" />
+
+    <Spinner
+        android:id="@+id/missionType"
+        android:layout_width="188dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/missionTimer"
+        app:layout_constraintTop_toBottomOf="@+id/mission_name_text" />
+
+    <Button
+        android:id="@+id/missionDatabtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/mission_data"
+        android:onClick="openMissionData"
+        app:layout_constraintEnd_toEndOf="@+id/startMissionbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/startMissionbtn"
+        app:layout_constraintTop_toBottomOf="@+id/startMissionbtn" />
+
+    <Button
+        android:id="@+id/mapBoxbtn"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="56dp"
+        android:onClick="openMapbox"
+        android:text="@string/map_box"
+        app:layout_constraintBottom_toBottomOf="@+id/startMissionbtn"
+        app:layout_constraintStart_toEndOf="@+id/startMissionbtn"
+        app:layout_constraintTop_toTopOf="@+id/startMissionbtn" />
+
+    <Button
+        android:id="@+id/startMissionbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:onClick="startMissionTimer"
+        android:text="@string/start_mission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/missionTimer" />
+
+    <Button
+        android:id="@+id/helpbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="openHelp"
+        android:text="@string/help"
+        app:layout_constraintEnd_toEndOf="@+id/mapBoxbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mapBoxbtn"
+        app:layout_constraintTop_toBottomOf="@+id/mapBoxbtn" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="243dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/mission_parameters"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluetoothConnectivity" />
+
+    <TextView
+        android:id="@+id/mission_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/mission_name"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/mission_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/mission_type"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mission_name" />
+
+    <EditText
+        android:id="@+id/mission_name_text"
+        android:layout_width="175dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textCapWords"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/mission_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
