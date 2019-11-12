@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+
+    <Button
+        android:id="@+id/maps_button"
+        android:layout_width="100dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#3F51B5"
+        android:onClick="openMaps"
+        android:text="Maps"
+        android:textColor="#FDFCFBFB"
+        app:layout_constraintEnd_toStartOf="@+id/data_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_button" />
+
+    <Button
+        android:id="@+id/data_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        android:background="#3F51B5"
+        android:onClick="openData"
+        android:text="Data"
+        android:textColor="#FDFCFBFB"
+        app:layout_constraintEnd_toStartOf="@+id/camera_button"
+        app:layout_constraintStart_toEndOf="@+id/maps_button"
+        app:layout_constraintTop_toBottomOf="@+id/start_button" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="143dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="48dp"
+        android:background="#4CAF50"
+        android:text="Mission Start"
+        android:onClick="start"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team3_view" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="127dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="60dp"
+        android:background="#F44336"
+        android:text="Stop"
+        android:onClick="stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team3_view" />
+
+    <Button
+        android:id="@+id/camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="40dp"
+        android:background="#3F51B5"
+        android:onClick="openCamera"
+
+        android:text="Camera"
+        android:textColor="#FDFCFBFB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stop_button" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="175dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_psu_foreground" />
+
+    <TextView
+        android:id="@+id/project_raptor"
+        android:layout_width="199dp"
+        android:layout_height="36dp"
+        android:text="Project Raptor"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/team3_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team 3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/project_raptor" />
+
+    <Button
+        android:id="@+id/test_button"
+        android:layout_width="123dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:background="#3F51B5"
+        android:text="System Check"
+        android:onClick="openTest"
+        android:textColor="#FDFCFBFB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

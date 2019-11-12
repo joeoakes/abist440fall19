@@ -1,0 +1,16 @@
+//
+// Created by Prime on 10/30/2019.
+//
+
+#ifndef ABIST440FA19OAKESTEAM3_ARDUINO_H
+#define ABIST440FA19OAKESTEAM3_ARDUINO_H
+
+
+
+class Arduino {
+
+};
+
+
+
+#endif //ABIST440FA19OAKESTEAM3_ARDUINO_H

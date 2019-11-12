@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home2_foreground"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_missionstatus"
+            android:icon="@drawable/ic_status_foreground"
+            android:title="@string/menu_missionstatus" />
+        <item
+            android:id="@+id/nav_gps"
+            android:icon="@drawable/ic_gps_foreground"
+            android:title="@string/menu_gps" />
+        <item
+            android:id="@+id/nav_data"
+            android:icon="@drawable/ic_data_foreground"
+            android:title="@string/menu_data" />
+        <item
+            android:id="@+id/nav_lock"
+            android:icon="@drawable/ic_lock_foreground"
+            android:title="@string/menu_lock" />
+    </group>
+
+
+
+</menu>
