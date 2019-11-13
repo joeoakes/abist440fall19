@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.psu.ab.ist.sworks">
+    package="com.example.projectraptor">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission
-        android:name="android.permission.BLUETOOTH"
-        android:required="false" />
+    <uses-sdk />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -25,27 +20,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".FingerprintScannerActivity"></activity>
+        <activity android:name=".BLE.DeviceScanner" />
         <activity
-            android:name=".BlockChain"
-            android:label="@string/title_activity_block_chain"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Authentication">
+            android:name=".Tensorflow.DetectorActivity"
+            android:parentActivityName=".MainActivity"
+            />
+        <activity
+            android:name=".Map"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Stats"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SQLite.Dashboard"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MissionTimer" />
-        <activity android:name=".Help" />
-        <activity android:name=".MissionData" />
-        <activity android:name=".tensor.DetectorActivity" />
-        <activity
-            android:name=".Mapbox"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"></activity>
     </application>
 
 </manifest>
